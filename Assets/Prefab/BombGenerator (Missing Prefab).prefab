@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4481722784550638998
+--- !u!1 &5359357229812436588
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4481722784550639016}
-  - component: {fileID: 4481722784550639017}
+  - component: {fileID: 3790890011242524943}
+  - component: {fileID: 2170674069962875409}
   m_Layer: 0
-  m_Name: BombGenerator
+  m_Name: BombGenerator (Missing Prefab)
   m_TagString: Untagged
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4481722784550639016
+--- !u!4 &3790890011242524943
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4481722784550638998}
+  m_GameObject: {fileID: 5359357229812436588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.99, y: 0.01, z: -1217.1803}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4481722784550639017
+--- !u!114 &2170674069962875409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4481722784550638998}
+  m_GameObject: {fileID: 5359357229812436588}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c23e59cad6cbaac41a4f82cedca84a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minSpawnInterval: 0.5
-  _maxSpawnInterval: 0.8
-  _startSpawnPointY: -7
-  _endSpawnPointY: 7
-  _minBombSize: 0.3
-  _maxBombSize: 0.5
+  _minSpawnInterval: 0.3
+  _maxSpawnInterval: 0.7
+  _startSpawnPointY: -5
+  _endSpawnPointY: 5
+  _minBombSize: 0.2
+  _maxBombSize: 1
   _minBombSpeed: 0.5
-  _maxBombSpeed: 1.5
+  _maxBombSpeed: 10
   _bombPrefab: {fileID: 4198990224019306218, guid: 3a336b663bd886949960fe694f00933b, type: 3}

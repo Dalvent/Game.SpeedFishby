@@ -7,20 +7,23 @@ public class Bomb : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
+    private SpeedGrower _speedGrower;
     public float Speed
     {
         get => _speed;
         set => _speed = value;
     }
     
+    private float GrowledSpeed =>  _speedGrower.GetSpeedWithCurrentGrow(_speed);
+    
     private void Start()
     {
-        Debug.Log("Start");
+        _speedGrower = FindObjectOfType<SpeedGrower>();
     }
 
     public void FixedUpdate()
     {
-        transform.position += Vector3.left * (_speed * Time.fixedDeltaTime);
+        transform.position += Vector3.left * (GrowledSpeed * Time.fixedDeltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

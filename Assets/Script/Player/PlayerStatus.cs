@@ -8,12 +8,17 @@ public class PlayerStatus : MonoBehaviour
     public bool IsAlive { get; private set; } = true;
     public void Kill()
     {
+        if(!IsAlive)
+            return;
         IsAlive = false;
         _onKilled.Invoke();
         Debug.Log("Player is killed");
     }
     public void Restore()
     {
+        if(IsAlive)
+            return;
+        
         IsAlive = true;
         _onRestore.Invoke();
         Debug.Log("Player is restored");

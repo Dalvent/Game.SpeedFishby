@@ -15,8 +15,6 @@ public class BombGenerator : MonoBehaviour
     [Min(0)][SerializeField] private float _maxBombSize;
     [Min(0)][SerializeField] private float _minBombSpeed;
     [Min(0)][SerializeField] private float _maxBombSpeed;
-    //[Min(0)][SerializeField] private float _speedTimeMultiplayer;
-
     [SerializeField] private GameObject _bombPrefab;
 
     private readonly DateTime GameStartDateTime = DateTime.Now;

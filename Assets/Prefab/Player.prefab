@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 258094617333081198}
   - component: {fileID: 1224317141}
   - component: {fileID: 1224317142}
+  - component: {fileID: 1671365430216022897}
+  - component: {fileID: 6646269007947255468}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -28,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258094617333081199}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.05, y: -0.02, z: 0}
-  m_LocalScale: {x: 0.21870528, y: 0.205353, z: 1}
+  m_LocalPosition: {x: -3.99, y: 0.75, z: 0}
+  m_LocalScale: {x: 0.13, y: 0.13, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7a0ff3a1434cd1145868813b2d799507, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9242e1f3e0b0b224787b93ccf77a93e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b086c41fa28fa7468b78cfb7ff0ebf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 9
+  _speed: 50
 --- !u!50 &1224317141
 Rigidbody2D:
   serializedVersion: 4
@@ -146,6 +148,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ScoreIncrementor, Assembly-CSharp
+        m_MethodName: OnPlayerKilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6646269007947255468}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   _onRestore:
     m_PersistentCalls:
       m_Calls:
@@ -161,3 +187,290 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ScoreIncrementor, Assembly-CSharp
+        m_MethodName: OnPlayerRestore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!60 &1671365430216022897
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258094617333081199}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16.18, y: 9.1}
+    newSize: {x: 16.18, y: 9.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.6499999, y: -3.35}
+      - {x: 2.87, y: -3.33}
+      - {x: 3.3, y: -3.28}
+      - {x: 3.6799998, y: -3.22}
+      - {x: 3.86, y: -3.1799998}
+      - {x: 4.08, y: -3.1299999}
+      - {x: 4.22, y: -3.08}
+      - {x: 4.5, y: -2.9299998}
+      - {x: 4.63, y: -2.85}
+      - {x: 4.71, y: -2.79}
+      - {x: 4.83, y: -2.6799998}
+      - {x: 5.08, y: -2.3999999}
+      - {x: 5.17, y: -2.25}
+      - {x: 5.27, y: -2.06}
+      - {x: 5.31, y: -1.9599999}
+      - {x: 5.33, y: -1.9}
+      - {x: 5.4, y: -1.73}
+      - {x: 5.43, y: -1.64}
+      - {x: 5.47, y: -1.49}
+      - {x: 5.48, y: -1.4499999}
+      - {x: 5.48, y: -1.12}
+      - {x: 5.45, y: -1.04}
+      - {x: 5.33, y: -0.91999996}
+      - {x: 5.24, y: -0.94}
+      - {x: 5.0699997, y: -1.1}
+      - {x: 5.0499997, y: -1.04}
+      - {x: 5.0099998, y: -0.95}
+      - {x: 4.95, y: -0.87}
+      - {x: 4.81, y: -0.74}
+      - {x: 4.66, y: -0.61}
+      - {x: 4.5499997, y: -0.5}
+      - {x: 4.46, y: -0.34}
+      - {x: 4.42, y: -0.19}
+      - {x: 4.42, y: 0.01}
+      - {x: 4.43, y: 0.08}
+      - {x: 4.5299997, y: 0.22}
+      - {x: 4.5699997, y: 0.37}
+      - {x: 4.56, y: 0.62}
+      - {x: 4.5299997, y: 0.71999997}
+      - {x: 4.42, y: 0.90999997}
+      - {x: 4.2999997, y: 1.0699999}
+      - {x: 4.17, y: 1.1999999}
+      - {x: 4.04, y: 1.3199999}
+      - {x: 3.87, y: 1.4699999}
+      - {x: 3.59, y: 1.65}
+      - {x: 3.5, y: 1.6999999}
+      - {x: 3.46, y: 1.81}
+      - {x: 3.36, y: 2.02}
+      - {x: 3.24, y: 2.1599998}
+      - {x: 3.03, y: 2.37}
+      - {x: 2.87, y: 2.49}
+      - {x: 2.71, y: 2.58}
+      - {x: 2.33, y: 2.77}
+      - {x: 2.21, y: 2.82}
+      - {x: 1.63, y: 3.03}
+      - {x: 1.38, y: 3.12}
+      - {x: 1.06, y: 3.25}
+      - {x: 0.96, y: 3.31}
+      - {x: 0.94, y: 3.3799999}
+      - {x: 0.85999995, y: 3.4499998}
+      - {x: 0.78, y: 3.4499998}
+      - {x: 0.72999996, y: 3.4199998}
+      - {x: 0.63, y: 3.27}
+      - {x: 0.35999998, y: 2.9099998}
+      - {x: 0.25, y: 2.77}
+      - {x: 0.14, y: 2.56}
+      - {x: 0.08, y: 2.3799999}
+      - {x: -0.089999996, y: 2.27}
+      - {x: -0.41, y: 2.22}
+      - {x: -0.7, y: 2.1599998}
+      - {x: -0.89, y: 2.11}
+      - {x: -1.1999999, y: 2.01}
+      - {x: -1.4499999, y: 1.91}
+      - {x: -1.67, y: 1.81}
+      - {x: -1.81, y: 1.73}
+      - {x: -2, y: 1.61}
+      - {x: -2.1, y: 1.52}
+      - {x: -2.22, y: 1.4}
+      - {x: -2.31, y: 1.25}
+      - {x: -2.44, y: 1.12}
+      - {x: -2.6, y: 1.03}
+      - {x: -2.83, y: 0.9}
+      - {x: -3.24, y: 0.71999997}
+      - {x: -3.4499998, y: 0.64}
+      - {x: -3.78, y: 0.55}
+      - {x: -3.8799999, y: 0.5}
+      - {x: -4.06, y: 0.52}
+      - {x: -4.14, y: 0.5}
+      - {x: -4.27, y: 0.59999996}
+      - {x: -4.4, y: 0.71999997}
+      - {x: -4.67, y: 0.97999996}
+      - {x: -4.67, y: 0.98999995}
+      - {x: -4.75, y: 1.0799999}
+      - {x: -5.0299997, y: 1.4699999}
+      - {x: -5.16, y: 1.61}
+      - {x: -5.2, y: 1.6999999}
+      - {x: -5.35, y: 1.86}
+      - {x: -5.45, y: 1.8399999}
+      - {x: -5.45, y: 1.79}
+      - {x: -5.43, y: 1.68}
+      - {x: -5.42, y: 1.68}
+      - {x: -5.42, y: -3.11}
+      - {x: -5.4, y: -3.1299999}
+      - {x: -5.37, y: -3.12}
+      - {x: -5.2999997, y: -3.02}
+      - {x: -5.29, y: -2.99}
+      - {x: -5.24, y: -2.9099998}
+      - {x: -5.16, y: -2.81}
+      - {x: -5.08, y: -2.72}
+      - {x: -5.0299997, y: -2.62}
+      - {x: -4.8599997, y: -2.3899999}
+      - {x: -4.75, y: -2.26}
+      - {x: -4.49, y: -2.01}
+      - {x: -4.29, y: -1.8399999}
+      - {x: -4.15, y: -1.74}
+      - {x: -4.04, y: -1.66}
+      - {x: -3.9199998, y: -1.62}
+      - {x: -3.81, y: -1.5799999}
+      - {x: -3.79, y: -1.63}
+      - {x: -3.7099998, y: -1.67}
+      - {x: -3.57, y: -1.68}
+      - {x: -3.33, y: -1.75}
+      - {x: -3.25, y: -1.8}
+      - {x: -3.1499999, y: -1.8299999}
+      - {x: -2.9399998, y: -1.9399999}
+      - {x: -2.71, y: -2.09}
+      - {x: -2.59, y: -2.19}
+      - {x: -2.29, y: -2.4199998}
+      - {x: -2.1399999, y: -2.56}
+      - {x: -2.1, y: -2.59}
+      - {x: -1.81, y: -2.6799998}
+      - {x: -1.77, y: -2.74}
+      - {x: -1.68, y: -2.77}
+      - {x: -1.06, y: -3.08}
+      - {x: -0.87, y: -3.1699998}
+      - {x: -0.76, y: -3.1899998}
+      - {x: -0.5, y: -3.22}
+      - {x: -0.35999998, y: -3.24}
+      - {x: -0.19, y: -3.26}
+      - {x: 0.099999994, y: -3.3}
+      - {x: 0.24, y: -3.31}
+      - {x: 0.35, y: -3.33}
+      - {x: 0.51, y: -3.34}
+      - {x: 0.53999996, y: -3.37}
+      - {x: 0.71, y: -3.3899999}
+      - {x: 0.97999996, y: -3.3999999}
+      - {x: 1.5, y: -3.3999999}
+      - {x: 1.51, y: -3.3899999}
+      - {x: 1.99, y: -3.3899999}
+      - {x: 2.21, y: -3.3799999}
+    - - {x: -5.29, y: 0.39}
+      - {x: -5.2999997, y: 0.25}
+      - {x: -5.29, y: 0.14}
+      - {x: -5.2799997, y: 0.14999999}
+--- !u!82 &6646269007947255468
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258094617333081199}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1b073081b7892a349942237837b285a1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

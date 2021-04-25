@@ -8,7 +8,11 @@ public class BackgroundReapetMoving : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private float _startXPosition;
     private float _positionXToRepeat;
+
+    private SpeedGrower _speedGrower;
     
+    private float GrowledSpeed =>  _speedGrower.GetSpeedWithCurrentGrow(_speed);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +21,13 @@ public class BackgroundReapetMoving : MonoBehaviour
         _spriteRenderer.drawMode = SpriteDrawMode.Tiled;
         _positionXToRepeat = transform.position.x - (_spriteRenderer.size.x * transform.localScale.x);
         _spriteRenderer.size *= new Vector2(2, 1);
+        _speedGrower = FindObjectOfType<SpeedGrower>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position += Vector3.left * (_speed * Time.fixedDeltaTime);
+        transform.position += Vector3.left * (GrowledSpeed * Time.fixedDeltaTime);
         if (transform.position.x <= _positionXToRepeat)
         {
             transform.position = new Vector2(
