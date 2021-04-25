@@ -5,28 +5,23 @@ using UnityEngine;
 
 public class ScoreIncrementor : MonoBehaviour
 {
-    [SerializeField] private bool _needIncrement = true;
+    [SerializeField] private int _scoreInSecond = 24;
+    private bool _needIncrement = true;
     public int Score { get; private set; }
     // Update is called once per frame
-
-    private void Start()
+    
+    void FixedUpdate()
     {
-        _playerStatus = FindObjectOfType<PlayerStatus>();
-    }
-
-    void Update()
-    {
-        if (_playerStatus.IsAlive) 
-            Score += 1;
+        Score += _scoreInSecond;
     }
     
-    public void OnKilled()
+    public void OnPlayerKilled()
     {
-        _canvas.gameObject.SetActive(true);
+        _needIncrement = false;
     }
     
-    public void OnRestore()
+    public void OnPlayerRestore()
     {
-        _canvas.gameObject.SetActive(false);
+        _needIncrement = true;
     }
 }
