@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: BombGenerator (Missing Prefab)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _minSpawnInterval: 0.3
-  _maxSpawnInterval: 0.7
+  _maxSpawnInterval: 0.5
   _startSpawnPointY: -5
   _endSpawnPointY: 5
   _minBombSize: 0.2
-  _maxBombSize: 1
+  _maxBombSize: 0.4
   _minBombSpeed: 0.5
   _maxBombSpeed: 10
   _bombPrefab: {fileID: 4198990224019306218, guid: 3a336b663bd886949960fe694f00933b, type: 3}
