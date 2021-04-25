@@ -485,6 +485,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2002667315915682748, guid: eb515d47ff418c54590e0404614f1353, type: 3}
+      propertyPath: m_Text
+      value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002667316160885086, guid: eb515d47ff418c54590e0404614f1353, type: 3}
+      propertyPath: m_Name
+      value: MenuButton
+      objectReference: {fileID: 0}
     - target: {fileID: 2002667316252601749, guid: eb515d47ff418c54590e0404614f1353, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -572,6 +580,26 @@ PrefabInstance:
     - target: {fileID: 2002667316252601753, guid: eb515d47ff418c54590e0404614f1353, type: 3}
       propertyPath: m_Name
       value: GameOverUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002667316371591948, guid: eb515d47ff418c54590e0404614f1353, type: 3}
+      propertyPath: m_Name
+      value: YourAreGeyNowText
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002667316371591950, guid: eb515d47ff418c54590e0404614f1353, type: 3}
+      propertyPath: m_Text
+      value: Your are gey now
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002667316403062564, guid: eb515d47ff418c54590e0404614f1353, type: 3}
+      propertyPath: m_Name
+      value: YourBestScoreText
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002667316491709526, guid: eb515d47ff418c54590e0404614f1353, type: 3}
+      propertyPath: m_Name
+      value: RestartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002667316591417383, guid: eb515d47ff418c54590e0404614f1353, type: 3}
+      propertyPath: m_Text
+      value: Restart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb515d47ff418c54590e0404614f1353, type: 3}
@@ -706,7 +734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3790890011242524943, guid: 9b95bd1acde3d634b8d6c0de3296cabf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.09
+      value: 23.77
       objectReference: {fileID: 0}
     - target: {fileID: 3790890011242524943, guid: 9b95bd1acde3d634b8d6c0de3296cabf, type: 3}
       propertyPath: m_LocalPosition.y
