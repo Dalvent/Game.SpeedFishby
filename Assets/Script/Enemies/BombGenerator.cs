@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.SymbolStore;
+using Script.Enemies;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+[RequireComponent(typeof(BombPool))]
 public class BombGenerator : MonoBehaviour
 {
     [Min(0)][SerializeField] private float _minSpawnInterval;
@@ -15,7 +17,8 @@ public class BombGenerator : MonoBehaviour
     [Min(0)][SerializeField] private float _maxBombSize;
     [Min(0)][SerializeField] private float _minBombSpeed;
     [Min(0)][SerializeField] private float _maxBombSpeed;
-    [SerializeField] private GameObject _bombPrefab;
+
+    private BombPool _bombPool;
 
     private readonly DateTime GameStartDateTime = DateTime.Now;
 
@@ -24,6 +27,7 @@ public class BombGenerator : MonoBehaviour
     private void Start()
     {
         _generateNextBombTime = DateTime.Now;
+        _bombPool = GetComponent<BombPool>();
     }
 
     // Update is called once per frame
@@ -31,7 +35,7 @@ public class BombGenerator : MonoBehaviour
     {
         if (DateTime.Now < _generateNextBombTime) 
             return;
-        
+
         GenerateBomb();
         _generateNextBombTime = GenerateTimeInterval();
     }
@@ -39,10 +43,11 @@ public class BombGenerator : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     private GameObject GenerateBomb()
     {
-        var bombGameObject = Instantiate(_bombPrefab, GenerateBombLocation(), Quaternion.identity);
-        bombGameObject.GetComponent<Bomb>().Speed = GenerateBombSpeed();
-        bombGameObject.transform.localScale = GenerateBombSize();
-        return bombGameObject;
+        return _bombPool.InflateBomb(
+            GenerateBombLocation(),
+            GenerateBombSize(),
+            GenerateBombSpeed()
+        ).gameObject;
     }
 
     private float GenerateBombSpeed()

@@ -11,7 +11,7 @@ public class BombDestroyOnLocation : MonoBehaviour
     {
         if (transform.position.x <= _xPositionWhereDestroy)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }
