@@ -11,7 +11,7 @@ public class BackgroundReapetMoving : MonoBehaviour
 
     private SpeedGrower _speedGrower;
     
-    private float GrowledSpeed =>  _speedGrower.GetSpeedWithCurrentGrow(_speed);
+    private float GrowledSpeed =>  _speedGrower != null ? _speedGrower.GetSpeedWithCurrentGrow(_speed) : 1;
 
     // Start is called before the first frame update
     void Start()

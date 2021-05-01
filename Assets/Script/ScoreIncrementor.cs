@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using SpeedyFishb;
 using UnityEngine;
 
 public class ScoreIncrementor : MonoBehaviour
 {
+    [SerializeField] private ScoreEvents _scoreEvents = new ScoreEvents();
     [SerializeField] private float _scoreInSecond = 24;
     private bool _needIncrement = true;
     private SpeedGrower _speedGrower;
@@ -16,7 +18,12 @@ public class ScoreIncrementor : MonoBehaviour
     {
         _speedGrower = FindObjectOfType<SpeedGrower>();
     }
-    
+
+    private void Update()
+    {
+        _scoreEvents.OnUpdate(Score);
+    }
+
     void FixedUpdate()
     {
         if(_needIncrement)
