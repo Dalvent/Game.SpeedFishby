@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hightscoreText: {fileID: 2870760711162218393}
-  _menuSceneIndex: 1
+  _menuSceneIndex: 0
 --- !u!1 &2870760711333795993
 GameObject:
   m_ObjectHideFlags: 0
