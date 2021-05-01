@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1224317142}
   - component: {fileID: 1671365430216022897}
   - component: {fileID: 6646269007947255468}
+  - component: {fileID: 6646269009064947815}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -216,7 +217,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 16.18, y: 9.1}
+    oldSize: {x: 19.2, y: 10.8}
     newSize: {x: 16.18, y: 9.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -474,3 +475,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &6646269009064947815
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258094617333081199}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 86816652a598a3547b551f556c97d97f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

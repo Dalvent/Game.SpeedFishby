@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3790890011242524943}
   - component: {fileID: 2170674069962875409}
+  - component: {fileID: 5626668295331406113}
   m_Layer: 0
   m_Name: BombGenerator (Missing Prefab)
   m_TagString: Untagged
@@ -51,4 +52,16 @@ MonoBehaviour:
   _maxBombSize: 0.4
   _minBombSpeed: 0.5
   _maxBombSpeed: 10
+--- !u!114 &5626668295331406113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5359357229812436588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b379d6d8e2f498885ac4d0cf021f087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _bombPrefab: {fileID: 4198990224019306218, guid: 3a336b663bd886949960fe694f00933b, type: 3}
