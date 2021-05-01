@@ -587,6 +587,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3258151781942446435, guid: 391cf1c9e2ce9c44b9fc1b685843aebd, type: 3}
+      propertyPath: m_Text
+      value: Reach 115,000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 391cf1c9e2ce9c44b9fc1b685843aebd, type: 3}
 --- !u!1001 &3669074248845638487
@@ -598,7 +602,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3669074248751063145, guid: c69dba06ff70134469a0a8b17e7b029b, type: 3}
       propertyPath: _scoreEvents._scoreEventItems.Array.data[0]._scoreToInvoke
-      value: 150000
+      value: 115000
       objectReference: {fileID: 0}
     - target: {fileID: 3669074248751063145, guid: c69dba06ff70134469a0a8b17e7b029b, type: 3}
       propertyPath: _scoreEvents._scoreEventItems.Array.data[0]._event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
