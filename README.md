@@ -1,1 +1,1 @@
-# SpeedFishby is a small stupid game ¯\_(ツ)_/¯ 
+# SpeedFishby is a small stupid game ¯\_(-_-)_/¯ 
