@@ -8,7 +8,7 @@ I had to learn:
 - Building a project for a mobile device
 
 The artist had to learn:
-- create sprites for games
-- create backgrounds
-- create design UI
-- use the git
+- Create sprites for games
+- Create backgrounds
+- Create design UI
+- Use the git
